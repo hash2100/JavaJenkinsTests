@@ -42,7 +42,6 @@ class ServiceTest {
         // create and configure mock
         when(database.getUniqueId()).thenReturn(43);
 
-
         // call method testing on the mock with parameter 12
         database.setUniqueId(12);
         database.getUniqueId();

@@ -21,23 +21,16 @@ public class SpyTest {
 	@Spy
 	List<String> list = new ArrayList<String>();
 	
-	@BeforeEach
-	void setup() {
-		//	list = new ArrayList<String>();	
-	}
-
 	@Test
-	void testListIsCorrect() {
+	void testListIsCorrect() {	
 		Exception exception = assertThrows(IndexOutOfBoundsException.class, () -> {
 			list.get(0);
 		});		
 		
 		list.add("10");
-		assertEquals("10", list.get(0));
+		assertEquals("10", list.get(0));		
 		
 		when(list.get(0)).thenReturn("20");
 		assertEquals("20", list.get(0));
-	}
-	
-	
+	}	
 }

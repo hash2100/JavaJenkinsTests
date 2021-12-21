@@ -12,7 +12,8 @@ public class Service {
 	}
 	
 	public String toString() {
-		return "Using database with id: " + String.valueOf(database.getUniqueId());
+		return "Using database with id: " + 
+				String.valueOf(database.getUniqueId());
 	}
 
 }
